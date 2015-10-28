@@ -7,7 +7,7 @@
 
 int wmain()
 {
-	Graphics::Init();
+	/*Graphics::Init();
 
 	Graphics::NewWindow({ 1600, 900 }, false, { 1600, 900 }, "Graphics Engine");
 
@@ -15,7 +15,13 @@ int wmain()
 
 	oGameLoop.Loop();
 
-	Graphics::Quit();
+	Graphics::Quit();*/
 
+
+	Graphics::Init();
+
+	Graphics::NewWindow({ 1280, 720 }, false, { 1600, 900 },"New Window", 0);
+
+	system("PAUSE");
 	return 0;
 }
