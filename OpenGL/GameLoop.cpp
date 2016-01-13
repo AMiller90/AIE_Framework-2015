@@ -96,10 +96,10 @@ void GameLoop::OnKeyDown(const SDL_Keycode ac_sdlSym, const Uint16 ac_uiMod, con
 
 void GameLoop::OnKeyUp(const SDL_Keycode ac_sdlSym, const Uint16 ac_uiMod, const SDL_Scancode ac_sdlScancode)
 {
-	switch (ac_sdlSym)
+	/*switch (ac_sdlSym)
 	{
 	default: break;
-	}
+	}*/
 }
 
 void GameLoop::OnExit()
