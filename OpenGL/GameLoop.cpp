@@ -37,10 +37,7 @@ void GameLoop::Loop()
 
 void GameLoop::Update()
 {
-	/*OnKeyDown(SDLK_s, KMOD_NONE, SDL_SCANCODE_S);
-	OnKeyDown(SDLK_w, KMOD_NONE, SDL_SCANCODE_W);
-	OnKeyDown(SDLK_a, KMOD_NONE, SDL_SCANCODE_A);
-	OnKeyDown(SDLK_d, KMOD_NONE, SDL_SCANCODE_D);*/
+	
 
 }
 void GameLoop::LateUpdate()
@@ -61,8 +58,8 @@ void GameLoop::Draw()
 
 	//Graphics::DrawRing({ 140, 140 }, 50, 25, { 50, 0, 200, 255 });
 	//Graphics::DrawCircle({ 800, 450 }, 200, 50, { 0, 255, 255, 150 });
-	
-	Graphics::DrawCircle({ 650, 400 }, 200, 50, { 0, 0, 255, 150 });
+
+	Graphics::DrawCircle({ X, Y }, 200, 50, { 0, 0, 255, 150 });
 
 
 }
@@ -75,19 +72,23 @@ void GameLoop::OnKeyDown(const SDL_Keycode ac_sdlSym, const Uint16 ac_uiMod, con
 	case SDLK_ESCAPE: m_bRunning = false; break; // End the loop
 
 	case SDLK_s:
-		Graphics::DrawCircle({650, 600 }, 200, 50, { 0, 0, 255, 150 });
+		//Graphics::DrawCircle({ 650, 600}, 200, 50, { 0, 0, 255, 150 });
+		Y += 10;
 		break;
 
 	case SDLK_w:
-		Graphics::DrawCircle({ 650, 200 }, 200, 50, { 0, 0, 255, 150 });
+		//Graphics::DrawCircle({ 650, 200 }, 200, 50, { 0, 0, 255, 150 });
+		Y -= 10;
 		break;
 
 	case SDLK_a:
-		Graphics::DrawCircle({ 250, 400 }, 200, 50, { 0, 0, 255, 150 });
+		//Graphics::DrawCircle({ 250, 400 }, 200, 50, { 0, 0, 255, 150 });
+		X -= 10;
 		break;
 
 	case SDLK_d:
-		Graphics::DrawCircle({ 1050, 400 }, 200, 50, { 0, 0, 255, 150 });
+		//Graphics::DrawCircle({ 1050, 400 }, 200, 50, { 0, 0, 255, 150 });
+		X += 10;
 		break;
 
 	default: printf("%s\n",SDL_GetKeyName(ac_sdlSym)); break;

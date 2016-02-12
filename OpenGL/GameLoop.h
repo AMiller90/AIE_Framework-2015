@@ -48,6 +48,10 @@ public:
 	GameLoop();
 	// The default de-constructor
 	~GameLoop();
+
+	int X = 650;
+	int Y = 400;
+
 };
 
 
